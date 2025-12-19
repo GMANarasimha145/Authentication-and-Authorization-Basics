@@ -5,6 +5,7 @@ const authRoutes = require('./routes/auth-routes');
 const userRoutes = require('./routes/user-routes');
 const adminRoutes = require('./routes/admin-routes');
 const imageRoutes = require('./routes/image-routes');
+const deployTestRoutes = require('./routes/deploy-test');
 
 
 const app = express();
@@ -17,6 +18,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/image', imageRoutes);
+app.use('/api/deploytest', deployTestRoutes);
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
